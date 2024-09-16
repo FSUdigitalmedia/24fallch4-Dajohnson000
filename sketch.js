@@ -1,8 +1,22 @@
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(windowWidth, windowHeight)
+  fill(0)
+  stroke(255)
+  textAlign(CENTER)
+ 
+
 }
 
 function draw() {
-  background(125);
-  circle(width/2, height/2, 40);
+  background(0)
+  for (let i = -0.4; i < 2; i += 2) {
+    push()
+    let x = width / 2 + 50 * sin(frameCount / 2 + i)
+    let y = height / 2
+    let size = 100
+    textSize(size-1)
+    translate(x, y)
+    text("Nervous", 0, 0)
+    pop()
+  }
 }
