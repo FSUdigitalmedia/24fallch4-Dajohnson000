@@ -1,3 +1,4 @@
+let z = (255)
 function setup() {
   createCanvas(windowWidth, windowHeight)
   fill(0)
@@ -8,7 +9,7 @@ function setup() {
 }
 
 function draw() {
-  background(0)
+  background(z)
   for (let i = -0.4; i < 2; i += 2) {
     push()
     let x = width / 2 + 50 * sin(frameCount / 2 + i)
@@ -18,5 +19,13 @@ function draw() {
     translate(x, y)
     text("Nervous", 0, 0)
     pop()
+  }
+}
+function keyReleased(){
+  (keyCode === 32); 
+    if (z == 255) {
+    z = 0;
+  } else {
+    z = 255
   }
 }
