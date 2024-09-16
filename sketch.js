@@ -14,7 +14,7 @@ function draw() {
   for (let i = -0.4; i < 2; i += 2) {
     push()
     let x = width / 2 + 50 * sin(frameCount / 2 + i)
-    let y = height / 2 + 50 * sin(frameCount / 2 + i)
+    let y = height / 2 + 50 * sin(frameCount / 3 + i)
     let size = 100
     textSize(size-1)
     translate(x, y)
